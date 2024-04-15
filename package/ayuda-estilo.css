@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
+
+* {
+    font-family: "Josefin Sans", sans-serif;
+    margin: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1vh 0;
+}
+
+.servicios {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.servicio {
+    text-align: center;
+    width: 100%;
+    position: relative;
+    
+}
+
+.servicio img {
+    width: 100%; 
+    margin-bottom: 20px;
+    background-size: cover;
+    height: 50vh;
+    margin: 0;
+    margin-bottom: 0;
+    object-fit: cover;
+}
+
+
+
+.servicio h2 {
+    background-color: #84734d;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: -5px;
+    
+}
+
+.texto-centrado {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1000px; 
+    font-size: 1.2em;
+    padding-top: 5vh;
+}
+
+.contacto {
+    text-align: center;
+    padding: 40px 0;
+  }
+  
+  .contacto h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+  }
+  
+  .contacto .formulario {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  .contacto label {
+    display: block;
+    margin-bottom: 5px;
+    text-align: left;
+  }
+  
+  .contacto input,
+  .contacto textarea {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .contacto button {
+    background-color: #84734d;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  .contacto button:hover {
+    background-color: #6e5a3b;
+  }
+  
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}

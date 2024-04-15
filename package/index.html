@@ -3,58 +3,195 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Bienvenido a GoodSound</title>
     <link rel="stylesheet" href="estilo.css">
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+    const iconoCarrito = document.getElementById('carrito');
+    const contenedorCarrito = document.getElementById('carrito-contenedor');
+    const suscribirseBtn = document.getElementById('suscribirse-btn');
+    const formularioRegistro = document.getElementById('formulario-registro');
+    const body = document.body;
+
+    iconoCarrito.addEventListener('click', function(event) {
+        event.stopPropagation();
+        contenedorCarrito.classList.toggle('mostrar');
+        formularioRegistro.classList.remove('mostrar'); 
+        body.classList.remove('formulario-abierto'); 
+    });
+
+    document.addEventListener('click', function(event) {
+        if (!formularioRegistro.contains(event.target) && formularioRegistro.classList.contains('mostrar')) {
+            formularioRegistro.classList.remove('mostrar');
+            body.classList.remove('formulario-abierto'); 
+        }
+    });
+
+    suscribirseBtn.addEventListener('click', function(event) {
+        event.stopPropagation(); 
+        formularioRegistro.classList.toggle('mostrar');
+        body.classList.toggle('formulario-abierto');
+    });
+});
+
+    </script>
 </head>
 <body>
     <header>
         <nav>
             <div id="logo">
-                <img src="icons8_league_of_legends_80px.png" alt="logo">
-                <h1>Merlina</h1>
+                <a href="index.html"><img id="Imagen" src="images-removebg-preview.png" alt="logo"></a>
+                <h1></h1>
             </div>
             <div id="links">
-                <a href="#">About</a>
-                <a href="#">Work</a>
-                <a href="#">Services</a>
-                <a href="#">Team</a>
-                <a href="#">Blog</a>
-                <a href="#">Contact</a>
+                <a href="Vista1.html">ELÉCTRICO</a>
+                <a href="#">ACUSTICO</a>
+                <a href="#">BAJO</a>
+                <a href="#">EQUIPOS DE SONIDO</a>
+                <a href="#">ACCESORIOS</a>
+                <a href="ayuda.html">AYUDA</a>
             </div>
-        </nav>
+            <div id="carrito">
+                <img src="icons8_shopping_cart_80px_1.png" alt="Carrito de compras">
+            </div>
+        </nav>        
         <div id="banner">
-            <h1 id="titulo">HOLA MUNDO</h1>
-            <h2 id="subtitulo">Hola merlina!</h2>
+            <h1 id="titulo">GIBSON LES PAUL</h1>
+            <h2 id="subtitulo">CON UN -30%</h2>
         </div>
     </header>
-    <section>
-        <div class="header">
-            <h1>¿QUIERES SABER MAS SOBRE MERLINA?</h1>
-        </div>
-        <div class="content">
-            <div class="left">  
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet enim soluta ducimus et tenetur illo alias cumque assumenda nihil. Modi temporibus velit neque eos? Culpa amet minus suscipit similique placeat id quo quae saepe impedit quam consequatur, nemo illum dolorem eos eligendi natus nobis accusantium sapiente ullam modi, quisquam, laborum rerum recusandae beatae. Incidunt labore odit quo cupiditate maiores minima.</p>
-                <h6>FORTNITE ES EL MEJOR JUEGO DEL MUNDO</h6>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cupiditate architecto, quaerat minus placeat numquam ab sapiente alias aut? Nobis error eos tempore modi harum, consequatur nemo id fugit ipsam pariatur quos, dolorem hic assumenda odio sunt officia saepe dolorum! Assumenda.</p>
-
+    <section id="variedad">
+        <h3>COMPRA POR CATEGORIA</h3>
+        <div class="categorias">
+            <img src="Lespaulosiosi.jpg" alt="guitarras gibson">
+            <div class="texto">
+                <h3>Les Paul</h3>
+                <p>Guitarra con maderas de caoba en el mástil, palisandro para el diapasón y caoba para el cuerpo.</p>
             </div>
-            <div class="right">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum, amet sapiente provident necessitatibus obcaecati nihil?</p>
-                <h6>IS IT RETINA DISPLAY READY?</h6>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt illo totam ratione aut, nemo explicabo, ut ullam repellat incidunt cumque voluptas doloremque similique voluptate maxime molestiae culpa recusandae laboriosam consectetur!</p>
-                    <div class="iconos">
-                        <img src="facebook.png" alt="facebook">
-                        <img src="twitter.png" alt="twitter">
-                        <img src="youtube.png" alt="youtube">
-                        <img src="instagram.png" alt="instagram">
-                        <img src="linkedin.png" alt="linkedin">
-                    </div>
+        </div>
+        <div class="categorias">
+            <img src="GIB-8000211__10765.jpg" alt="guitarras gibson">
+            <div class="texto">
+                <h3>SG</h3>
+                <p>Guitarra con cuerpo de caoba, Mástil de caoba, Diapasón de palisandro, Perfil del mástil redondeado.</p>
+            </div>
+        </div>
+        <div class="categorias">
+            <img src="explorer.jpg" alt="guitarras gibson">
+            <div class="texto">
+                <h3>Explorer</h3>
+                <p>Guitarra con cuerpo de caoba, Mástil de caoba, Forma del mástil cónica delgada, Diapasón de palisandro.</p>
+            </div>
+        </div>
+        <div class="categorias">
+            <img src="GIB-ES.jpg" alt="guitarras gibson">
+            <div class="texto">
+                <h3>ES</h3>
+                <p>Guitarra de cuerpo semihueco con tapa de arce AAA. Diapasón de palisandro e incrustaciones de acrílico Small Block.</p>
+            </div>
+        </div>
+        <div class="categorias">
+            <img src="gibsonacoustic.jpg" alt="guitarras gibson">
+            <div class="texto">
+                <h3>Acoustic</h3>
+                <p>Guitarra con tapa de pícea de Sitka maciza, Aros y fondo de caoba maciza, Mástil de caoba cónico delgado, Diapasón de palisandro.</p>
+            </div>
+        </div>
+        <div class="categorias">
+            <img src="Bass.jpg" alt="guitarras gibson">
+            <div class="texto">
+                <h3>Bass</h3>
+                <p>Bajo de arce laminado en Back & Sides, mástil de Caoba Hondureño de una pieza, traste oscuro de Brazilian Rosewood, dot inlays de madre perla.</p>
             </div>
         </div>
     </section>
-    <footer>
+    
+    <section id="descripcion">
+            <div class="bloque">
+                <div class="bloques">
+                    <h2>THE EVERLY BROTHERS J-180 RETURNS</h2>
+                    <p>Para celebrar el legado de The Everly Brothers, Gibson Custom ha reintroducido la Gibson Custom Everly Brothers J-180.</p>
+                </div>
+                <div class="bloques">
+                    <h2>THE SHAPE OF INSPIRATION TO COME</h2>
+                    <p>Inspirado en dibujos de 1957, el ligero y compacto Theodore Standard es tu nueva musa jugable sin esfuerzo.</p>
+                </div>
+                <div class="bloques">
+                    <h2>Gibson Mod™ Collection</h2>
+                    <p>Rarezas. Exclusivas. Mods de guitarra únicos y personalizados. Bajadas semanales.</p>
+                </div>
+            </div>
+    </section>
+    <section id="free-shiping">
+        <div class="cuadros">
+            <div class="cuadro">
+                <h2>DESPACHO GRATIS<h2>
+                <img src="icons8_truck_60px.png" alt="camion">
+            </div>
+            <div class="cuadro">
+                <h2>GARANTIA DE POR VIDA</h2>
+                <img src="icons8_protect_60px.png" alt="escudo">
+            </div>
+            <div class="cuadro">
+                <h2>FINANCIAMIENTO DISPONIBLE</h2>
+                <img src="icons8_coin_in_hand_60px.png" alt="monea">
+            </div>
+        </div>
+    <section id="registro">
+    <div class="contenido">
+        <h2>REGÍSTRESE PARA RECIBIR NOTICIAS Y OFERTAS</h2>
+        <button id="suscribirse-btn" onclick="mostrarFormulario()">Suscribirse</button>
+        <div id="formulario-registro" class="formulario-registro oculto">
+            <form id="form-registro">
+                <label for="nombre">Nombres:</label>
+                <input type="text" id="nombre" name="nombre" required>
+                <label for="apellido">Apellidos:</label>
+                <input type="text" id="apellido" name="apellido" required>
+                <label for="email">Dirección de correo electrónico:</label>
+                <input type="email" id="email" name="email" required>
+                <button type="submit">Registrarse ahora</button>
+            </form>
+            <p>Al enviar este formulario, acepta nuestros Términos y condiciones y Política de privacidad</a>.</p>
+        </div>
+    </div>
+    </section>
+    <section id="siguenos">
+        <h2>SÍGUENOS EN NUESTRAS REDES</h2>
+        <div class="redes-sociales">
+            <a href="https://www.facebook.com/"><img src="facebook.png" alt="Facebook"></a>
+            <a href="https://www.twitter.com/"><img src="twitter.png" alt="Twitter"></a>
+            <a href="https://www.instagram.com/"><img src="instagram.png" alt="Instagram"></a>
+        </div>
+    </section>
 
+
+    <section id="familia-goodsound">
+        <h2>VISITA A LA FAMILIA GOODSOUND</h2>
+        <div class="familia-goodsound-imagenes">
+            <a href="https://www.gibson.com/en-US/"><img src="icons8_gibson_80px_2.png" alt="Imagen 1"></a>
+            <a href="https://www.fender.com/es/start"><img src="icons8_2ewMX8J1fecKcoIIlabEybRmOA4_80px.png" alt="Imagen 2"></a>
+            <a href="https://www.epiphone.com/en-US/"><img src="icons8_2ewMnD3sOlm2WjBMQ4OjeIlOiil_125px.png" alt="Imagen 3"></a>
+        </div>
+        <footer>
+        <p>&copy; Big Ducks 2024</p>
     </footer>
+    
+    
+    <div id="carrito-contenedor" class="carrito-contenedor">
+        <div id="carrito-productos" class="carrito-productos">
+        </div>
+        <div class="carrito-vacio">
+            <p>Tu Carro está vacío</p>
+        </div>
+        <div class="carrito-sesion">
+            <button onclick="iniciarSesion()">Iniciar sesión</button>
+        </div>
+        <div class="carrito-registro">
+            <p>¿No tienes cuenta? <a href="">Regístrate</a></p>
+        </div>
+    </div>
+    
+    
 </body>
 
 </html>
